@@ -1,0 +1,29 @@
+{
+  "name": "api-key-tester-api",
+  "version": "1.0.0",
+  "description": "REST API for batch testing AI API keys",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "tail": "wrangler tail",
+    "db:create": "wrangler d1 create api-key-tester-db",
+    "db:init": "wrangler d1 execute api-key-tester-db --file=./schema.sql",
+    "db:query": "wrangler d1 execute api-key-tester-db --command"
+  },
+  "keywords": [
+    "api-key",
+    "tester",
+    "cloudflare",
+    "workers",
+    "openai",
+    "claude",
+    "gemini"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
